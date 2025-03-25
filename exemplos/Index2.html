@@ -9,14 +9,22 @@
 </br>
 <input type="number" id="numero" placeholder="numero"> 
 </br>
+<input type="number" id="multiplicacao" placeholder="X">
+</br>
+<input type="number" id="adicao" placeholder="Some">
 <button onclick="exibeDadoDigitado()">VAMOOOOO!</button>
 
     <script>
 function exibeDadoDigitado(){
     var numero = document.getElementById("numero").value;
+    var multiplicacao = document.getElementById("multiplicacao").value;
+    var adicao = document.getElementById("adicao").value;
     
 
-    alert(2025 - numero);}
+    alert("Resultado Subtração " + 2025 - numero)
+    alert("resultado de Multiplicação " + 2025 * multiplicacao);
+    
+    }
     
     </script> 
     
