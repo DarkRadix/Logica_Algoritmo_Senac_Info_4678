@@ -9,19 +9,23 @@
 </br>
 <input type="number" id="numero1" placeholder="numero"> 
 </br>
-<input type="number" id="numero2" placeholder="segundo numero">
-</br>
 <button onclick="calcular()">=</button>
 
     <script>
 function calcular(){
-    var numero1 = document.getElementById("numero1").value;
-    var numero2 = document.getElementById("numero2").value;
-    var resultado = Number(numero1) + Number(numero2);
-    var divisao = resultado / 2;
+
+   
+    var dam = Number(numero1) / 10;
+    var hm = Number(dam) / 10;
+    var km = Number(hm) / 10;
+    var dm = Number(numero1) * 10;
+    var cm = Number(dm) * 10
+    var mm = Number(cm) * 10;
 
 
-    alert("A média entre " + numero1 + " e " + numero2 + " é igual a " + divisao);
+    alert("a distancia de " + numero1 + "m" + " corresponde a " + km + "km " + hm + "hm " + dam + "dam " + dm + "dm "
+        + cm + "cm " + mm + "mm"
+    );
     }
     
     </script> 

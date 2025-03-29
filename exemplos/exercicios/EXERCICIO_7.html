@@ -9,19 +9,16 @@
 </br>
 <input type="number" id="numero1" placeholder="numero"> 
 </br>
-<input type="number" id="numero2" placeholder="segundo numero">
-</br>
 <button onclick="calcular()">=</button>
 
     <script>
 function calcular(){
     var numero1 = document.getElementById("numero1").value;
-    var numero2 = document.getElementById("numero2").value;
-    var resultado = Number(numero1) + Number(numero2);
-    var divisao = resultado / 2;
+    var dobro = Number(numero1) * 2;
+    var divisao = Number(numero1) / 3;
 
 
-    alert("A média entre " + numero1 + " e " + numero2 + " é igual a " + divisao);
+    alert("O dobro de " + numero1 + " é " + dobro + " a terça parte de " + numero1 + " é " + divisao);
     }
     
     </script> 
