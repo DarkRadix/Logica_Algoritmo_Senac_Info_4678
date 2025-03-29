@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="numero1" placeholder="numero"> 
+</br>
+<input type="number" id="numero2" placeholder="segundo numero">
+</br>
+<button onclick="calcular()">=</button>
+
+    <script>
+function calcular(){
+    var numero1 = document.getElementById("numero1").value;
+    var numero2 = document.getElementById("numero2").value;
+    var numeros = Number(numero1) + Number(numero2)
+
+    alert("A soma entre " + numero1 + " e " + numero2 + " é " + numeros);
+    }
+    
+    </script> 
+    
+</body> 
+</html>
