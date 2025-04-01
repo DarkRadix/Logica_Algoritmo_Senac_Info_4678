@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="A" placeholder="A">
+<input type="number" id="B" placeholder="B">
+<input type="number" id="C" placeholder="C"> 
+</br>
+<button onclick="calcular()">=</button>
+
+    <script>
+function calcular(){
+    var A = document.getElementById("A").value;
+    var B = document.getElementById("B").value;
+    var C = document.getElementById("C").value;
+    var klebin = B**2 - 4 * A * C;
+
+    alert("o valor de delta é: " + klebin);
+    }
+    
+    </script> 
+    
+</body> 
+</html>

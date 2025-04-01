@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="cigarroprd" placeholder="Cigarros por dia">
+</br>
+<input type="number" id="anos" placeholder="Anos">
+</br>
+<button onclick="calcular()">=</button>
+
+    <script>
+function calcular(){
+    var cigarroprd = document.getElementById("cigarroprd").value;
+    var anos = document.getElementById("anos").value;
+
+    var minutoperdido = anos * 365 * cigarroprd * 10;
+    var anoss = minutoperdido / (24*60);
+    var resultado = (anoss.toFixed(2));
+   alert("a pessoa teria perdido " + resultado + " dias de vida")
+
+
+
+   }
+    
+    </script> 
+    
+</body> 
+</html>

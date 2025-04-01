@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="altura" placeholder="ALTURA">
+<input type="number" id="largura" placeholder="LARGURA"> 
+</br>
+<button onclick="calcular()">=</button>
+
+    <script>
+function calcular(){
+    var altura = document.getElementById("altura").value;
+    var largura = document.getElementById("largura").value;
+    
+    var klebin = Number(altura) * Number(largura);
+
+    var resultado = klebin / 2;
+
+
+    alert("em uma area de " + klebin + " preciso de " + resultado + "L de tinta" );
+    }
+    
+    </script> 
+    
+</body> 
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="KM" placeholder="KM">
+</br>
+<input type="number" id="Dias" placeholder="Dias">
+</br>
+<button onclick="calcular()">=</button>
+
+    <script>
+function calcular(){
+    var Dias = document.getElementById("Dias").value;
+    var KM = document.getElementById("KM").value;
+    var valor = Dias * 90;
+    var valor2 = 0.20 * KM
+    var total = Number(valor) + Number(valor2);
+
+
+
+    alert("O valor total a pagar será: R$" + total );
+    }
+    
+    </script> 
+    
+</body> 
+</html>

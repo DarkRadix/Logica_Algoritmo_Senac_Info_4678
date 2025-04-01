@@ -7,26 +7,23 @@
 </head>
 <body>
 </br>
-<input type="number" id="numero1" placeholder="numero"> 
+<input type="number" id="metro"> 
 </br>
-<button onclick="calcular()">=</button>
+<button onclick="leiadistancia()">=</button>
 
     <script>
-function calcular(){
-
-   
-    var dam = Number(numero1) / 10;
+function leiadistancia(){
+    var metro = document.getElementById("metro").value;
+    var dam = Number(metro) / 10;
     var hm = Number(dam) / 10;
     var km = Number(hm) / 10;
-    var dm = Number(numero1) * 10;
+    var dm = Number(metro) * 10;
     var cm = Number(dm) * 10
     var mm = Number(cm) * 10;
 
 
-    alert("a distancia de " + numero1 + "m" + " corresponde a " + km + "km " + hm + "hm " + dam + "dam " + dm + "dm "
-        + cm + "cm " + mm + "mm"
-    );
-    }
+    alert(`A distancia de ${metro}m corresponde a: ${km}km, ${hm}hm, ${dam}dam, ${dm}dm,${metro}M, ${cm}cm, ${mm}mm.`)
+    ;}
     
     </script> 
     

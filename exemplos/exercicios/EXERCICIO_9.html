@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="numero1" placeholder="GRANA"> 
+</br>
+<button onclick="calcular()">=</button>
+
+    <script>
+function calcular(){
+    var numero1 = document.getElementById("numero1").value;
+    var klebin = Number(numero1) * 0.1736111111111111;
+    var arredondado = parseFloat(klebin.toFixed(2));
+
+
+    alert("SALDO DE: " + arredondado );
+    }
+    
+    </script> 
+    
+</body> 
+</html>
