@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="numero" placeholder="numero"> 
+
+<button onclick="exibeDadoDigitado()">VAMOOOOO!</button>
+
+    <script>
+function exibeDadoDigitado(){
+    var numero = Number(document.getElementById("numero").value);
+    var numero2 = Number(2025) - numero
+
+    
+    
+    
+    if(numero2 > 16){    
+       
+
+    alert("Voce tem idade suficiente para Votar, sua idade e de : " + numero2);
+    }else{
+        alert("Voce não tem o requisito minimo de idade para votar")
+    }
+}
+
+    </script> 
+    
+</body> 
+</html>

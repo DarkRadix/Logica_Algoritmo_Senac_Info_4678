@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+</br>
+<input type="number" id="numero" placeholder="numero"> 
+
+<button onclick="exibeDadoDigitado()">VAMOOOOO!</button>
+
+    <script>
+function exibeDadoDigitado(){
+    var numero = Number(document.getElementById("numero").value);
+
+    if(numero > 80){    
+    var velocidade = numero - 80 ;
+    var multa = velocidade * 5;
+    
+
+    alert("Voce foi Multado com a taxinha do amor, Valor de : " + multa);
+    }else{
+        alert("PARABENS VOCE ESTA DENTRO DO LIMITE DE VELOCIDADE PERMITIDO =)")
+    }
+}
+
+    </script> 
+    
+</body> 
+</html>
