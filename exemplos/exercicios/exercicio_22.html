@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alistamento Militar</title>
+</head>
+<body>
+  
+    <input type="number" id="anoNascimento" placeholder="Ano de Nascimento">
+</br>
+
+
+    <button onclick="verificarAlistamento()">Verificar</button>
+
+    <script>
+        function verificarAlistamento() {
+            var anoNascimento = document.getElementById("anoNascimento").value;
+
+            anoNascimento = parseInt(anoNascimento);
+            var anoAtual = parseInt(2025);
+
+            var idade = anoAtual - anoNascimento;
+
+            if (idade === 18) {
+                alert("Você nasceu em " + anoNascimento + " deve se alistar neste ano!");
+            } else if (idade < 18) {
+                var faltam = 18 - idade;
+                alert("Você nasceu em " + anoNascimento + " ainda não precisa se alistar. Faltam " + faltam + " ano(s) para o alistamento.");
+            } else {
+                var passou = idade - 18;
+                alert("Você nasceu em " + anoNascimento + " já deveria ter se alistado há " + passou + " ano(s).");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yuri:D</title>
+</head>
+<body>
+
+  <input type="number" id="distancia">
+
+  <button onclick="calcular()">Calcular</button>
+
+  <script>
+    function calcular() {
+      var km = Number(document.getElementById("distancia").value);
+      var preco;
+
+      if (km <= 200) {
+        preco = km * 0.5;
+      } else {
+        preco = km * 0.45;
+      }
+
+      alert("O preco da passagem e R$ " + preco.toFixed(2));
+    }
+  </script>
+
+</body>
+</html>

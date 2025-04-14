@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Triângulo?</title>
+</head>
+<body>
+
+  <input type="number" id="lado1"><br><br>
+  <input type="number" id="lado2"><br><br>
+  <input type="number" id="lado3"><br><br>
+
+  <button onclick="verificar()">Verificar</button>
+
+  <script>
+    function verificar() {
+      var l1 = Number(document.getElementById("lado1").value);
+      var l2 = Number(document.getElementById("lado2").value);
+      var l3 = Number(document.getElementById("lado3").value);
+
+      if (l1 < l2 + l3 && l2 < l1 + l3 && l3 < l1 + l2) {
+        alert("Pode formar um triângulo!");
+      } else {
+        alert("Não pode formar um triângulo.");
+      }
+    }
+  </script>
+
+</body>
+</html>

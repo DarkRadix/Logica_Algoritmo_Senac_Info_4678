@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri :D</title>
+</head>
+<body>
+    <br>
+    <input type="text" id="nome" placeholder="Digite o Nome"> 
+    <br>
+
+    <select id="sexo">
+        <option value="" selected disabled>Selecione o sexo</option>
+        <option value="masculino">Masculino♂️</option>
+        <option value="feminino">Feminino♀️</option>
+    </select> 
+    <br>
+
+    <input type="number" id="valor" placeholder="Digite o valor"> 
+    <button onclick="exibeDadoDigitado()">Verificar</button>
+
+    <script>
+        function exibeDadoDigitado() {
+            var nome = document.getElementById("nome").value;
+            var sexo = document.getElementById("sexo").value;
+            var valor = parseFloat(document.getElementById("valor").value);
+
+            if (sexo === "masculino") {
+                desconto = valor * 0.05;
+            } else if (sexo === "feminino") {
+                desconto = valor * 0.13;
+            }
+
+            var valorFinal = valor - desconto;
+
+            alert("Olá " + nome + " '" + sexo  + "' " + "! Com o desconto, o valor final da compra é: R$ " + valorFinal.toFixed(2));
+        }
+    </script> 
+</body> 
+</html>

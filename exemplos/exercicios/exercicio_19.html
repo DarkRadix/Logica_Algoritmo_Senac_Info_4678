@@ -7,28 +7,30 @@
 </head>
 <body>
 </br>
-<input type="number" id="numero" placeholder="nome"> 
+<input type="text" id="nome" placeholder="nome"> 
 </br>
-<input type="number" id="nota" placeholder="nota"> 
+<input type="number" id="nota" placeholder="Nota"> 
 </br>
-<input type="number" id="nota2" placeholder="nota2"> 
+<input type="number" id="nota2" placeholder="Nota 2"> 
 
 <button onclick="exibeDadoDigitado()">VAMOOOOO!</button>
 
     <script>
 function exibeDadoDigitado(){
+    var nome = document.getElementById("nome").value;
     var nota = Number(document.getElementById("nota").value);
     var nota2 = Number(document.getElementById("nota2").value);
+    var resultado = Number(nota) + Number(nota2);
+    var resultado2 = resultado / 2;
+ 
+    
 
-    
-    
-    
-    if(numero2 > 16){    
-       
+    if(resultado2 > 7){    
+    alert("O aluno : " + nome + "alcançou a nota de " + resultado2) + "Parabens voce foi aprovado";
 
-    alert("Voce tem idade suficiente para Votar, sua idade e de : " + numero2);
     }else{
-        alert("Voce não tem o requisito minimo de idade para votar")
+
+        alert("Voce nao alcançou a nota minima")
     }
 }
 
