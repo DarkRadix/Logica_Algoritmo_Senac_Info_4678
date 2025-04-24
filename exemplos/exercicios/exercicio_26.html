@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yuri :D</title>
+</head>
+<body>
+
+
+    <input type="number" id="numero1"><br><br>
+
+
+    <input type="number" id="numero2"><br><br>
+
+    <button onclick="compararNumeros()">Comparar</button>
+
+    <script>
+        function compararNumeros() {
+            var numero1 = parseInt(document.getElementById("numero1").value);
+            var numero2 = parseInt(document.getElementById("numero2").value);
+
+            if ((numero1 > numero2) && (numero1 !== numero2)) {
+                alert("O primeiro valor é o maior");
+            } else if ((numero2 > numero1) && (numero2 !== numero1)) {
+                alert("O segundo valor é o maior");
+            } else {
+                alert("Os dois valores são iguais");
+            }
+        }
+    </script>
+</body>
+</html>
