@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yuri:D</title>
+</head>
+<body>
+
+ 
+  Lado 1: <input type="number" id="lado1"><br>
+  Lado 2: <input type="number" id="lado2"><br>
+  Lado 3: <input type="number" id="lado3"><br>
+
+  <button onclick="verificar()">Verificar</button>
+
+  <script>
+    function verificar() {
+      var l1 = Number(document.getElementById("lado1").value);
+      var l2 = Number(document.getElementById("lado2").value);
+      var l3 = Number(document.getElementById("lado3").value);
+
+    
+      if (l1 < l2 + l3 && l2 < l1 + l3 && l3 < l1 + l2) {
+        alert("Pode formar um triângulo!");
+
+      
+        if (l1 === l2 && l2 === l3) {
+          alert("O triângulo é EQUILÁTERO.");
+        } else if (l1 === l2 || l2 === l3 || l1 === l3) {
+          alert("O triângulo é ISÓSCELES.");
+        } else {
+          alert("O triângulo é ESCALENO.");
+        }
+      } else {
+        alert("Não pode formar um triângulo.");
+      }
+    }
+  </script>
+
+</body>
+</html>

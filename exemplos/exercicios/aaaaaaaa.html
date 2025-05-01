@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JoKenPo com ID</title>
+</head>
+<body>
+
+<h1>JoKenPo - Escolha sua jogada:</h1>
+
+<label><input type="radio" id="pedra" value="pedra"> Pedra</label><br>
+<label><input type="radio" id="papel" value="papel"> Papel</label><br>
+<label><input type="radio" id="tesoura" value="tesoura"> Tesoura</label><br><br>
+
+<button onclick="jogar()">Jogar!</button>
+
+<script>
+function jogar() {
+    var jogador = "";
+
+    // Verifica manualmente qual botão está selecionado
+    if (document.getElementById("pedra").checked) {
+        jogador = "pedra";
+    } else if (document.getElementById("papel").checked) {
+        jogador = "papel";
+    } else if (document.getElementById("tesoura").checked) {
+        jogador = "tesoura";
+    } else {
+        alert("Por favor, escolha Pedra, Papel ou Tesoura!");
+        return;
+    }
+
+    // Escolha aleatória do computador
+    var escolhas = ["pedra", "papel", "tesoura"];
+    var computador = escolhas[Math.floor(Math.random() * 3)];
+
+    alert("Computador escolheu: " + computador);
+
+    // Determinar o resultado
+    var resultado = "";
+
+    if (jogador === computador) {
+        resultado = "Empate!";
+    } else if (
+        (jogador === "pedra" && computador === "tesoura") ||
+        (jogador === "papel" && computador === "pedra") ||
+        (jogador === "tesoura" && computador === "papel")
+    ) {
+        resultado = "Você venceu!";
+    } else {
+        resultado = "Você perdeu!";
+    }
+
+    alert(resultado);
+
+    // Desmarca todos os radios
+    document.getElementById("pedra").checked = false;
+    document.getElementById("papel").checked = false;
+    document.getElementById("tesoura").checked = false;
+}
+</script>
+
+</body>
+</html>

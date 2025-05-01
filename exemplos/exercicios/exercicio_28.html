@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exercicio 28</title>
 </head>
 <body>
 
 
-    <input type="number" id="nota1" step="0.1"><br><br>
+  <input type="number" id="largura" placeholder="Largura Terreno"><br><br>
 
-    <input type="number" id="nota2" step="0.1"><br><br>
 
-    <button onclick="calcularMedia()">Calcular Media</button>
+  <input type="number" id="comprimento" placeholder="Comprimento Terreno"><br><br>
 
-    <script>
-        function calcularMedia() {
-            var nota1 = parseFloat(document.getElementById("nota1").value);
-            var nota2 = parseFloat(document.getElementById("nota2").value);
-            var media = (nota1 + nota2) / 2;
+  <button onclick="verificar()">Calcular</button>
 
-            if (media <= 4.9) {
-                alert("Media: " + media.toFixed(1) + " - REPROVADO");
-            } else if (media >= 5.0 && media <= 6.9) {
-                alert("Media: " + media.toFixed(1) + " - RECUPERACAO");
-            } else {
-                alert("Media: " + media.toFixed(1) + " - APROVADO");
-            }
+  <script>
+    function verificar() {
+      var largura = Number(document.getElementById("largura").value);
+      var comprimento = Number(document.getElementById("comprimento").value);
+      var area = largura * comprimento;
+
+      alert("A área do terreno é " + area + " m²");
+
+      if (area < 100) {
+        alert("Classificação: TERRENO POPULAR");
+      } else {
+        if (area <= 500) {
+          alert("Classificação: TERRENO MASTER");
+        } else {
+          alert("Classificação: TERRENO VIP");
         }
-    </script>
+      }
+    }
+  </script>
+
 </body>
 </html>
