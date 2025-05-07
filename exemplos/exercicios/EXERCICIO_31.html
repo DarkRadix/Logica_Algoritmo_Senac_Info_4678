@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <h3>Jogo JoKenPo</h3>
+
+  <p>Escolha sua jogada:</p>
+  <button onclick="jogar('pedra')">Pedra</button>
+  <button onclick="jogar('papel')">Papel</button>
+  <button onclick="jogar('tesoura')">Tesoura</button>
+
+  <script>
+    function jogar(jogador) {
+      var opcoes = ['pedra', 'papel', 'tesoura'];
+      var computador = opcoes[Math.floor(Math.random() * 3)];
+
+      var resultado = "";
+
+      if (jogador === computador) {
+        resultado = "Empate!";
+      } else {
+        if (jogador === 'pedra' && computador === 'tesoura' ||
+            jogador === 'papel' && computador === 'pedra' ||
+            jogador === 'tesoura' && computador === 'papel') {
+          resultado = "Você venceu!";
+        } else {
+          resultado = "Você perdeu!";
+        }
+      }
+
+      alert("Você jogou: " + jogador +
+            "\nComputador jogou: " + computador +
+            "\nResultado: " + resultado);
+    }
+  </script>
+
+</body>
+</html>

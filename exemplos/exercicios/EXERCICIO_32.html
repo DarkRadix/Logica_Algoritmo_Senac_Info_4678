@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <h3>Jogo de Adivinhação</h3>
+
+  <p>Digite um número entre 1 e 5:</p>
+  <input type="number" id="palpite" min="1" max="5">
+  <button onclick="jogar()">Tentar</button>
+
+  <script>
+    function jogar() {
+      var jogador = Number(document.getElementById("palpite").value);
+      var sorteado = Math.floor(Math.random() * 5) + 1;
+
+      if (jogador < 1 || jogador > 5) {
+        alert("Digite um número entre 1 e 5.");
+      } else if (jogador === sorteado) {
+        alert("Parabéns! Você acertou. Número sorteado: " + sorteado);
+      } else {
+        alert("Errou! O número sorteado foi: " + sorteado);
+      }
+    }
+  </script>
+
+</body>
+</html>
