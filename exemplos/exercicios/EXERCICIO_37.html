@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  Salário atual: <input type="number" id="salario"><br><br>
+
+  Gênero: <br>
+  <input type="radio" name="genero" value="f"> Feminino<br>
+  <input type="radio" name="genero" value="m"> Masculino<br><br>
+
+  Anos de empresa: <input type="number" id="anos"><br><br>
+
+  <button onclick="calcularReajuste()">Calcular Novo Salário</button>
+
+  <script>
+    function calcularReajuste() {
+      var salario = Number(document.getElementById("salario").value);
+      var anos = Number(document.getElementById("anos").value);
+      var generoInput = document.querySelector('input[name="genero"]:checked');
+
+      if (!generoInput) {
+        alert("Por favor, selecione o gênero.");
+        return;
+      }
+
+      var genero = generoInput.value;
+      var aumento = 0;
+
+      if (genero === "f") {
+        if (anos < 15) {
+          aumento = 0.05;
+        } else if (anos <= 20) {
+          aumento = 0.12;
+        } else {
+          aumento = 0.23;
+        }
+      }
+
+      if (genero === "m") {
+        if (anos < 20) {
+          aumento = 0.03;
+        } else if (anos <= 30) {
+          aumento = 0.13;
+        } else {
+          aumento = 0.25;
+        }
+      }
+
+      var novoSalario = salario + (salario * aumento);
+
+      alert("Novo salário: R$ " + novoSalario.toFixed(2));
+    }
+  </script>
+
+</body>
+</html>

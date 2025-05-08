@@ -4,24 +4,34 @@
 </head>
 <body>
 
-  <h3>Jogo de Adivinhação</h3>
+  <h3>Calculadora de IMC</h3>
 
-  <p>Digite um número entre 1 e 5:</p>
-  <input type="number" id="palpite" min="1" max="5">
-  <button onclick="jogar()">Tentar</button>
+  Peso (kg): <input type="number" id="peso"><br><br>
+  Altura (m): <input type="number" id="altura" step="0.01"><br><br>
+
+  <button onclick="calcularIMC()">Calcular IMC</button>
 
   <script>
-    function jogar() {
-      var jogador = Number(document.getElementById("palpite").value);
-      var sorteado = Math.floor(Math.random() * 5) + 1;
+    function calcularIMC() {
+      var peso = Number(document.getElementById("peso").value);
+      var altura = Number(document.getElementById("altura").value);
 
-      if (jogador < 1 || jogador > 5) {
-        alert("Digite um número entre 1 e 5.");
-      } else if (jogador === sorteado) {
-        alert("Parabéns! Você acertou. Número sorteado: " + sorteado);
+      var imc = peso / (altura * altura);
+      var classificacao = "";
+
+      if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+      } else if (imc >= 18.5 && imc < 25) {
+        classificacao = "Peso ideal";
+      } else if (imc >= 25 && imc < 30) {
+        classificacao = "Sobrepeso";
+      } else if (imc >= 30 && imc < 40) {
+        classificacao = "Obesidade";
       } else {
-        alert("Errou! O número sorteado foi: " + sorteado);
+        classificacao = "Obesidade morbida";
       }
+
+      alert("Seu IMC e: " + imc.toFixed(2) + "\nClassificacao: " + classificacao);
     }
   </script>
 

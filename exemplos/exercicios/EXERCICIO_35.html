@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <h3>Aluguel de Carros</h3>
+
+  Tipo de carro :<select id="tipoCarro">
+    <option value="popular">Popular</option>
+    <option value="luxo">Luxo</option>
+  </select><br><br>
+
+  Dias de aluguel: <input type="number" id="dias"><br><br>
+  Km percorridos: <input type="number" id="km"><br><br>
+
+  <button onclick="calcularPreco()">Calcular Preço</button>
+
+  <script>
+    function calcularPreco() {
+      var tipo = document.getElementById("tipoCarro").value;
+      var dias = Number(document.getElementById("dias").value);
+      var km = Number(document.getElementById("km").value);
+
+      var precoDia = 0;
+      var precoKm = 0;
+
+      if (tipo === "popular") {
+        precoDia = 90;
+        if (km <= 100) {
+          precoKm = km * 0.20;
+        } else {
+          precoKm = km * 0.10;
+        }
+      }
+
+      if (tipo === "luxo") {
+        precoDia = 150;
+        if (km <= 200) {
+          precoKm = km * 0.30;
+        } else {
+          precoKm = km * 0.25;
+        }
+      }
+
+      var total = (dias * precoDia) + precoKm;
+      alert("Total a pagar: R$ " + total.toFixed(2));
+    }
+  </script>
+
+</body>
+</html>

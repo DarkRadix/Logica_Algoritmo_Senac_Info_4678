@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <h3>Vida Saudável</h3>
+
+  Horas no mês: <input type="number" id="horas"><br><br>
+
+  <button onclick="calcularPontos()">Calcular Pontos e Dinheiro</button>
+
+  <script>
+    function calcularPontos() {
+      var horas = Number(document.getElementById("horas").value);
+      var pontos = 0;
+
+      if (horas <= 10) {
+        pontos = horas * 2;
+      } else if (horas <= 20) {
+        pontos = horas * 5;
+      } else {
+        pontos = horas * 10;
+      }
+
+      var dinheiro = pontos * 0.05;
+
+      alert("Você fez " + pontos + " pontos.\n" +
+            "Você ganhou R$ " + dinheiro.toFixed(2));
+    }
+  </script>
+
+</body>
+</html>
