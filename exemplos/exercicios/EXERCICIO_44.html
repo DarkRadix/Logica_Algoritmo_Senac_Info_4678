@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <script>
+    var inicio = Number(prompt("Digite o primeiro valor:"));
+    var fim = Number(prompt("Digite o último valor:"));
+    var passo = Number(prompt("Digite o incremento:"));
+    var contagem = "";
+
+    for (var i = inicio; i < fim; i += passo) {
+      contagem += i + " ";
+    }
+
+    contagem += "Acabou!";
+    console.log(contagem);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+  var numeroSorteado = Math.floor(Math.random() * 10) + 1;
+  var tentativas = 4;
+
+  for (var i = 1; i <= tentativas; i++) {
+    var palpite = Number(prompt("Tentativa " + i + " de " + tentativas + ": Adivinhe o número (1 a 10)"));
+
+    if (palpite === numeroSorteado) {
+      alert("Parabéns! Você acertou o número " + numeroSorteado + " na tentativa " + i + "!");
+      break;
+    } else {
+      alert("Errado! Tente novamente.");
+    }
+  }
+
+  if (palpite !== numeroSorteado) {
+    alert("Suas tentativas acabaram! O número era " + numeroSorteado);
+  }
+</script>
+
+</body>
+</html>

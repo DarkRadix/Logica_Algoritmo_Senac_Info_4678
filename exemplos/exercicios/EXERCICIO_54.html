@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+  var somaAlturas = 0;
+  var pesoMais90 = 0;
+  var pesoMenos50AlturaMenos160 = 0;
+  var alturaMais190PesoMais100 = 0;
+
+  for (var i = 1; i <= 7; i++) {
+    var peso = Number(prompt("Digite o peso da pessoa " + i + " (em kg):"));
+    var altura = Number(prompt("Digite a altura da pessoa " + i + " (em metros):"));
+
+    somaAlturas += altura;
+
+    if (peso > 90) {
+      pesoMais90++;
+    }
+
+    if (peso < 50 && altura < 1.60) {
+      pesoMenos50AlturaMenos160++;
+    }
+
+    if (altura > 1.90 && peso > 100) {
+      alturaMais190PesoMais100++;
+    }
+  }
+
+  var mediaAltura = somaAlturas / 7;
+
+  console.log("Média de altura do grupo: " + mediaAltura.toFixed(2) + " metros");
+  console.log("Pessoas que pesam mais de 90Kg: " + pesoMais90);
+  console.log("Pessoas que pesam menos de 50Kg e medem menos de 1.60m: " + pesoMenos50AlturaMenos160);
+  console.log("Pessoas que medem mais de 1.90m e pesam mais de 100Kg: " + alturaMais190PesoMais100);
+</script>
+
+</body>
+</html>

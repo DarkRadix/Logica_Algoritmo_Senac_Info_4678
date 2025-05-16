@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <script>
+    var sorteados = [];
+    var acimaDe5 = 0;
+    var divisiveisPor3 = 0;
+
+    for (var i = 0; i < 20; i++) {
+      var numero = Math.floor(Math.random() * 11); // sorteia de 0 a 10
+      sorteados.push(numero);
+
+      if (numero > 5) {
+        acimaDe5++;
+      }
+
+      if (numero % 3 === 0) {
+        divisiveisPor3++;
+      }
+    }
+
+    console.log("Números sorteados: " + sorteados.join(", "));
+    console.log("Quantidade de números acima de 5: " + acimaDe5);
+    console.log("Quantidade de números divisíveis por 3: " + divisiveisPor3);
+  </script>
+
+</body>
+</html>

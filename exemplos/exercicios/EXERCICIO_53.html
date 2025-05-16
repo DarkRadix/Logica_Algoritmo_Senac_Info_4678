@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+  var totalHomens = 0;
+  var totalMulheres = 0;
+  var somaIdades = 0;
+  var somaIdadesHomens = 0;
+  var mulheresMais20 = 0;
+
+  for (var i = 1; i <= 5; i++) {
+    var idade = Number(prompt("Digite a idade da pessoa " + i + ":"));
+    var sexo = prompt("Digite o sexo da pessoa " + i + " (M/F):").toUpperCase();
+
+    somaIdades += idade;
+
+    if (sexo === "M") {
+      totalHomens++;
+      somaIdadesHomens += idade;
+    } else if (sexo === "F") {
+      totalMulheres++;
+      if (idade > 20) {
+        mulheresMais20++;
+      }
+    } else {
+      alert("Sexo inválido, por favor digite M ou F.");
+      i--; // repete a leitura dessa pessoa
+    }
+  }
+
+  var mediaIdade = somaIdades / 5;
+  var mediaIdadeHomens = totalHomens > 0 ? (somaIdadesHomens / totalHomens) : 0;
+
+  console.log("Homens cadastrados: " + totalHomens);
+  console.log("Mulheres cadastradas: " + totalMulheres);
+  console.log("Média de idade do grupo: " + mediaIdade.toFixed(2));
+  console.log("Média de idade dos homens: " + mediaIdadeHomens.toFixed(2));
+  console.log("Mulheres com mais de 20 anos: " + mulheresMais20);
+</script>
+
+</body>
+</html>
