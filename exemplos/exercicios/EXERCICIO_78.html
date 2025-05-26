@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script>
+  let numeros = [];
+
+  for (let i = 0; i < 15; i++) {
+    let num = parseInt(prompt("Digite o número " + (i + 1) + ":"));
+    numeros.push(num);
+  }
+
+  console.log("Vetor completo: " + numeros);
+
+  console.log("Posições com múltiplos de 10:");
+
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 10 === 0) {
+      console.log("Número " + numeros[i] + " na posição " + i);
+    }
+  }
+</script>
+
+</body>
+</html>

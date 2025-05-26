@@ -5,19 +5,14 @@
 <body>
 
 <script>
-  var vetor = [];
+  var fibonacci = [1, 1];
 
-  for (var i = 0; i < 10; i++) {
-    if (i % 2 === 0) {
-      vetor.push(5);
-    } else {
-      vetor.push(3);
-    }
+  for (var i = 2; i < 15; i++) {
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
   }
 
-
-  for (var i = 0; i < vetor.length; i++) {
-    console.log("Posição " + i + ": " + vetor[i]);
+  for (var i = 0; i < fibonacci.length; i++) {
+    console.log("Posição " + i + ": " + fibonacci[i]);
   }
 </script>
 
